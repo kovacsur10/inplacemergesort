@@ -56,12 +56,12 @@ void merge_test_not_squared_count_3(){ // D is empty.
 }
 
 int main(){
-	block_merge_forward_test_1();
-	block_merge_forward_test_2();
-	merge_test_papers();
+	//block_merge_forward_test_1();
+	//block_merge_forward_test_2();
+	//merge_test_papers();
 	merge_test_not_squared_count_1();
-	merge_test_not_squared_count_2();
-	merge_test_not_squared_count_3();
+	//merge_test_not_squared_count_2();
+	//merge_test_not_squared_count_3();
 
 	system("pause");
 	return 0;

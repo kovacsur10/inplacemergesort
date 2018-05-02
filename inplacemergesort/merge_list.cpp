@@ -143,6 +143,9 @@ void merge_list::prepare(){
 
 			// 2. Merge the tail (DC) using the buffer (BA).
 			position e = std::make_pair(d.first, c.second);
+			if(c.first < d.first){
+				e.first = c.first;
+			}
 			position buf = std::make_pair(a.second-length(e), a.second);
 			position h = std::make_pair(b.first, a.second);
 			sort(buf, d, c);
