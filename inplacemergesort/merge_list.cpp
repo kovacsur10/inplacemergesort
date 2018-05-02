@@ -35,6 +35,15 @@ merge_list::merge_list(const std::initializer_list<int>& l1, const std::initiali
 		init_lengths.first = l1.size();
 		init_lengths.second = l2.size();
 	}
+
+	//This part is only for the verification!
+	for(const auto e : l1){
+		verification_data.push_back(e);
+	}
+	for(const auto e : l2){
+		verification_data.push_back(e);
+	}
+	std::sort(verification_data.begin(), verification_data.end());
 }
 
 void merge_list::block_merge_forward(){
@@ -306,4 +315,15 @@ std::ostream& operator<<(std::ostream& os, const merge_list& list){
 
 unsigned merge_list::length(const position& pos){
 	return pos.second - pos.first;
+}
+
+bool merge_list::verify() const{
+	if(data.size() != verification_data.size())
+		return false;
+	for(size_t i = 0; i < data.size(); i++){
+		if(data[i] != verification_data[i]){
+			return false;
+		}
+	}
+	return true;
 }

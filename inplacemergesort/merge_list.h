@@ -15,12 +15,15 @@ public:
 
 	friend std::ostream& operator<<(std::ostream& os, const merge_list& list);
 
+	bool verify() const;
+
 private:
 	typedef std::pair<size_t, size_t> position;
 
 	std::vector<int> data;
 	std::vector<int>::iterator buffer;
 	std::vector<int>::iterator end;
+	std::vector<int> verification_data;
 	std::pair<size_t, size_t> init_lengths;
 	bool merged;
 	unsigned block_size;
