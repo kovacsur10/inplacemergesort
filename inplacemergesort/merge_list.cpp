@@ -2,7 +2,6 @@
 
 #include <cmath>
 #include <algorithm> // upper_bound, reverse, distance
-#include <ostream>
 
 // Construct the first list, from 2 lists.
 merge_list::merge_list(const std::initializer_list<int>& l1, const std::initializer_list<int>& l2) : merged(false){
@@ -219,7 +218,7 @@ void merge_list::main(){
 		}
 
 		// Run the algorithm in loop.
-		ptrdiff_t offset = main_worker(0);
+		std::ptrdiff_t offset = main_worker(0);
 		while(offset > 0){
 			offset = main_worker(offset);
 		}
@@ -238,7 +237,7 @@ void merge_list::main(){
 	}
 }
 
-ptrdiff_t merge_list::main_worker(const ptrdiff_t offset){
+std::ptrdiff_t merge_list::main_worker(const std::ptrdiff_t offset){
 	// Set the leftmost element of the remainings.
 	std::vector<int>::iterator first = buffer + block_size;
 

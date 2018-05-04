@@ -1,7 +1,9 @@
-#pragma once
+#ifndef MERGE_LIST_H
+#define MERGE_LIST_H 
 
 #include <vector>
 #include <utility>
+#include <ostream>
 
 class merge_list{
 public:
@@ -36,7 +38,7 @@ private:
 
 	void main();
 
-	ptrdiff_t main_worker(const ptrdiff_t offset);
+	std::ptrdiff_t main_worker(const std::ptrdiff_t offset);
 
 	bool is_perfect_square(const size_t num) const;
 
@@ -50,3 +52,5 @@ private:
 
 	unsigned length(const position& pos);
 };
+
+#endif
