@@ -99,6 +99,7 @@ void merge_list::prepare(){
 
 			buffer = data.begin();
 			end = data.end();
+			end_of_normal = end;
 		} else{ // Preparation is needed according to the paper.
 			// Create the named ranges - A B C D.
 			// A positions first element is the first character,
@@ -174,6 +175,7 @@ void merge_list::prepare(){
 				buffer = data.begin();
 			}
 			end = data.end();
+			end_of_normal = data.end() - (e.second - e.first);
 		}
 	}
 }
@@ -244,10 +246,14 @@ std::ptrdiff_t merge_list::main_worker(const std::ptrdiff_t offset){
 	// Find the second series.
 	std::vector<int>::iterator second = first + (offset == 0 ? block_size : offset);
 	while(second < end && (*(second - 1) <= *(second))){
-		second += block_size;
+		if(second+block_size <= end_of_normal){
+			second += block_size;
+		}else{
+			second = end_of_normal;
+		}
 	}
 	// Only one series can be created. The loop can be halted. Cleanup phase can begin.
-	if(second == end){
+	if(!(first <= second && second < end)){
 		return -1;
 	}
 

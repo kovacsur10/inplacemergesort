@@ -25,6 +25,7 @@ private:
 	std::vector<int> data;
 	std::vector<int>::iterator buffer;
 	std::vector<int>::iterator end;
+	std::vector<int>::iterator end_of_normal; //beginning of part E
 	std::vector<int> verification_data;
 	std::pair<size_t, size_t> init_lengths;
 	bool merged;
