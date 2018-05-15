@@ -1,68 +1,52 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
+#include <fstream>
 #include "merge_list.h"
 
 using namespace std;
 
-void run_test(merge_list& arr, const string& tc_name){
-	merge_list arr_before = arr;
-
-	cout << "=== " << tc_name << " ===" << endl;
-	arr.merge();
-	
-	if(arr.verify()){
-		cout << "Success!" << endl << endl;
+// Ez a függvény beolvassa az adatokat egy forrásfájlból.
+void read_from_file(const std::string& file_name, std::vector<int>& v1, std::vector<int>& v2){
+	unsigned count1, count2;
+	ifstream file;
+	file.open(file_name);
+	if(file.is_open()){
+		file >> count1 >> count2;
+		for(unsigned i = 0; i < count1; i++){
+			int x;
+			file >> x;
+			v1.push_back(x);
+		}
+		for(unsigned i = 0; i < count2; i++){
+			int x;
+			file >> x;
+			v2.push_back(x);
+		}
+		file.close();
 	} else{
-		cout << "Fail!" << endl;
-		cout << "before: " << arr_before << endl;
-		cout << "after:  " << arr << endl << endl;
+		throw new std::runtime_error("File could not be opened!");
 	}
 }
 
-void block_merge_forward_test_1(){
-	merge_list arr({ 3, 5, 8 }, { 1, 2, 2, 3, 3, 4, 4, 5, 6, 6, 7, 8, 9, 10 });
-
-	run_test(arr, "block_merge_forward_test_1");
+// Ez a függvény kiírja a képernyőre a használathoz szükséges segítséget.
+void printHelp(){
+	cout << endl;
+	cout << "Usage: ./inplacemergesort <text file name>" << endl;
 }
 
-void block_merge_forward_test_2(){
-	merge_list arr({ 1, 2, 2, 3, 3, 4, 4, 5, 6, 6, 7, 8, 9, 10 }, { 3, 5, 8 });
+int main(int argc, char *argv[]){
+	if(argc != 2){
+		printHelp();
+		return 1;
+	}
+	std::vector<int> part1, part2;
+	try{
+		read_from_file(std::string(argv[1]), part1, part2);
+	} catch(const std::runtime_error& err){
+		cout << err.what() << endl;
+		return 1;
+	}
 
-	run_test(arr, "block_merge_forward_test_2");
-}
 
-void merge_test_papers(){
-	merge_list arr({ 2,2,2, 4,4, 5,5, 6, 7, 8,8, 10 }, { 1,1,1, 2,2, 3,3, 5, 7,7, 8, 9,9 });
-
-	run_test(arr, "merge_test_papers");
-}
-
-void merge_test_not_squared_count_1(){ // TODO: create a test which won't have the trailing section (skipping prepare 3-6)
-	merge_list arr({ 2,2,2, 4,4, 5,5, 6, 7, 8,8 }, { 1,1,1, 2,2, 3,3, 5, 7,7, 8, 9,9 });
-
-	run_test(arr, "merge_test_not_squared_count_1");
-}
-
-void merge_test_not_squared_count_2(){ // Random. F exists len(f) = 1. ABCD exist.
-	merge_list arr({ 2,2,2, 4, 5,5, 6, 8, 10 }, { 1,1, 2, 3,3, 5, 7,7, 8, 9,9 });
-
-	run_test(arr, "merge_test_not_squared_count_2");
-}
-
-void merge_test_not_squared_count_3(){ // D is empty.
-	merge_list arr({ 2,2,2, 4, 5,5, 6, 8, 10 }, { 1,1, 2, 3,3, 5, 7,7, 9,9 });
-
-	run_test(arr, "merge_test_not_squared_count_3");
-}
-
-int main(){
-	block_merge_forward_test_1();
-	block_merge_forward_test_2();
-	merge_test_papers();
-	merge_test_not_squared_count_1();
-	merge_test_not_squared_count_2();
-	merge_test_not_squared_count_3();
-
-	system("pause");
 	return 0;
 }

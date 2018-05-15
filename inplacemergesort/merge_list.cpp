@@ -3,15 +3,24 @@
 #include <cmath>
 #include <algorithm> // upper_bound, reverse, distance
 
-// Construct the first list, from 2 lists.
+// Construct the first list, from 2 initializer lists.
 merge_list::merge_list(const std::initializer_list<int>& l1, const std::initializer_list<int>& l2) : merged(false){
+	initialize(l1, l2);
+}
+
+// Construct the first list, from 2 vectors.
+merge_list::merge_list(const std::vector<int>& l1, const std::vector<int>& l2) : merged(false){
+	initialize(l1, l2);
+}
+
+void merge_list::initialize(const std::vector<int>& l1, const std::vector<int>& l2){
 	bool second_is_copied = false;
 
 	// If one of the sublists is shorter, than the sqrt(length), it must go to the beginning of the vector.
 	double limit = sqrt(l1.size() + l2.size());
 	block_size = static_cast<unsigned>(limit);
 	if(l2.size() < limit){ // Note: This is the only case when the second sublist goes to the beginning.
-		// Add the second sublist to the list.
+						   // Add the second sublist to the list.
 		for(auto e : l2){
 			data.push_back(e);
 		}
@@ -321,7 +330,7 @@ std::ostream& operator<<(std::ostream& os, const merge_list& list){
 	return os;
 }
 
-unsigned merge_list::length(const position& pos){
+size_t merge_list::length(const position& pos){
 	return pos.second - pos.first;
 }
 

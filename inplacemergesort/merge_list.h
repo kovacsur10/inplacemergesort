@@ -8,6 +8,8 @@
 class merge_list{
 public:
 	merge_list(const std::initializer_list<int>& l1, const std::initializer_list<int>& l2);
+
+	merge_list(const std::vector<int>& l1, const std::vector<int>& l2);
 	
 	inline bool is_merged() const{
 		return merged;
@@ -31,6 +33,8 @@ private:
 	bool merged;
 	unsigned block_size;
 
+	void initialize(const std::vector<int>& l1, const std::vector<int>& l2);
+
 	void block_merge_forward();
 
 	void block_merge_forward_worker(size_t& offset, size_t& first_part_length);
@@ -51,7 +55,7 @@ private:
 
 	void sort(const position& buffer, const position& part1, const position& part2);
 
-	unsigned length(const position& pos);
+	size_t length(const position& pos);
 };
 
 #endif
