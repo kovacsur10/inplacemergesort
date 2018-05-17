@@ -45,13 +45,7 @@ void merge_list::initialize(const std::vector<int>& l1, const std::vector<int>& 
 	}
 
 	//This part is only for the verification!
-	for(const auto e : l1){
-		verification_data.push_back(e);
-	}
-	for(const auto e : l2){
-		verification_data.push_back(e);
-	}
-	std::sort(verification_data.begin(), verification_data.end());
+	std::merge(l1.begin(), l1.end(), l2.begin(), l2.end(), back_inserter(verification_data));
 }
 
 void merge_list::block_merge_forward(){
@@ -70,7 +64,7 @@ void merge_list::block_merge_forward(){
 }
 
 void merge_list::block_merge_forward_worker(size_t& offset, size_t& first_part_length){
-	auto upper = std::upper_bound(data.begin() + offset, data.end(), data[offset]);
+	auto upper = std::upper_bound(data.begin() + offset + first_part_length, data.end(), data[offset]);
 	std::reverse(data.begin() + offset, data.begin() + offset + first_part_length);
 	std::reverse(data.begin() + offset + first_part_length, upper);
 	std::reverse(data.begin() + offset, upper);
@@ -286,6 +280,7 @@ std::ptrdiff_t merge_list::main_worker(const std::ptrdiff_t offset){
 }
 
 void merge_list::swap(const position& pos1, const position& pos2){
+	// Select the first position (p1.first <= p2.first must apply).
 	position p1 = pos1;
 	position p2 = pos2;
 	if(p1.first > p2.first){
@@ -293,6 +288,7 @@ void merge_list::swap(const position& pos1, const position& pos2){
 		p2 = pos1;
 	}
 
+	// Swaps the elements.
 	for(size_t i = p1.second - length(p2); i < p1.second; i++){
 		swap(i, p2.first + i - p1.second + length(p2));
 	}
