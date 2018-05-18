@@ -1,4 +1,4 @@
-ï»¿#include <iostream>
+#include <iostream>
 #include <string>
 #include <fstream>
 #include <chrono>
@@ -10,13 +10,13 @@
 
 using namespace std;
 
-// Ez a fÃ¼ggvÃ©ny beolvassa az adatokat egy forrÃ¡sfÃ¡jlbÃ³l.
-// ParamÃ©terek:
-//     file_name: a beolvasandÃ³ fÃ¡jl neve
-//     v1: az elsÅ‘ rÃ©szvektor
-//     v2: a mÃ¡sodik rÃ©szvektor
-// VisszatÃ©rÃ©si Ã©rtÃ©k: -
-// KivÃ©tel: Ha a fÃ¡jl nem megnyithatÃ³, akkor egy runtime_error kivÃ¡ltÃ³dik.
+// Ez a függvény beolvassa az adatokat egy forrásfájlból.
+// Paraméterek:
+//     file_name: a beolvasandó fájl neve
+//     v1: az elsõ részvektor
+//     v2: a második részvektor
+// Visszatérési érték: -
+// Kivétel: Ha a fájl nem megnyitható, akkor egy runtime_error kiváltódik.
 void read_from_file(const std::string& file_name, std::vector<int>& v1, std::vector<int>& v2){
 	unsigned count1, count2;
 	ifstream file;
@@ -55,7 +55,7 @@ vector<int> trivial_merging(const vector<int>& v1, const vector<int>& v2){
 	return v_ret;
 }
 
-// Ez a fÃ¼ggvÃ©ny kiÃ­rja a kÃ©pernyÅ‘re a hasznÃ¡lathoz szÃ¼ksÃ©ges segÃ­tsÃ©get.
+// Ez a függvény kiírja a képernyõre a használathoz szükséges segítséget.
 void printHelp(){
 	cout << endl;
 	cout << "Usage: ./inplacemergesort <text file name>" << endl;
