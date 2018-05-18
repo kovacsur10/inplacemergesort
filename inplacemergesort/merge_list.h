@@ -37,10 +37,10 @@ private:
 	void initialize(const std::vector<int>& l1, const std::vector<int>& l2);
 
 	// This function does the block merge forward algorithm. (One of the two sublist is way shorter than the other one.)
-	void block_merge_forward();
+	void block_merge_forward(std::vector<int>::iterator bIt, std::vector<int>::iterator eIt, const size_t count, const bool check);
 
 	// This function is the repeatable logic in the block merge forward algorithm.
-	void block_merge_forward_worker(size_t& offset, size_t& first_part_length);
+	void block_merge_forward_worker(std::vector<int>::iterator bIt, std::vector<int>::iterator eIt, size_t& offset, size_t& first_part_length);
 
 	// This function does the preparations if the source list is not a perfect square.
 	void prepare();

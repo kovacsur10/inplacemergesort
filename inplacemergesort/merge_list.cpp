@@ -48,33 +48,37 @@ void merge_list::initialize(const std::vector<int>& l1, const std::vector<int>& 
 	std::merge(l1.begin(), l1.end(), l2.begin(), l2.end(), back_inserter(verification_data));
 }
 
-void merge_list::block_merge_forward(){
-	double limit = sqrt(data.size());
-	if(init_lengths.first > limit){
-		return;
+void merge_list::block_merge_forward(std::vector<int>::iterator bIt, std::vector<int>::iterator eIt, const size_t count, const bool check){
+	if(check){ 
+		double limit = sqrt(data.size());
+		if(init_lengths.first > limit){
+			return;
+		}
 	}
 
 	size_t offset = 0;
-	size_t first_length = init_lengths.first;
-	for(unsigned i = 0; i < init_lengths.first; i++){
-		block_merge_forward_worker(offset, first_length);
+	size_t first_length = count;
+	for(unsigned i = 0; i < count; i++){
+		block_merge_forward_worker(bIt, eIt, offset, first_length);
 	}
 
-	merged = true;
+	if(check){
+		merged = true;
+	}
 }
 
-void merge_list::block_merge_forward_worker(size_t& offset, size_t& first_part_length){
-	auto upper = std::upper_bound(data.begin() + offset + first_part_length, data.end(), data[offset]);
-	std::reverse(data.begin() + offset, data.begin() + offset + first_part_length);
-	std::reverse(data.begin() + offset + first_part_length, upper);
-	std::reverse(data.begin() + offset, upper);
+void merge_list::block_merge_forward_worker(std::vector<int>::iterator bIt, std::vector<int>::iterator eIt, size_t& offset, size_t& first_part_length){
+	auto upper = std::upper_bound(bIt + offset + first_part_length, eIt, data[bIt - data.begin() + offset]);
+	std::reverse(bIt + offset, bIt + offset + first_part_length);
+	std::reverse(bIt + offset + first_part_length, upper);
+	std::reverse(bIt + offset, upper);
 	first_part_length--; 
-	offset = upper - data.begin() - first_part_length;
+	offset = upper - bIt - first_part_length;
 }
 
 void merge_list::merge(){
 	if(!merged){
-		block_merge_forward();
+		block_merge_forward(data.begin(), data.end(), init_lengths.first, true);
 		prepare();
 		main();
 	}
@@ -96,9 +100,17 @@ void merge_list::prepare(){
 			first--;
 			second--;
 			std::reverse(data.begin() + init_lengths.first, data.end()); // Last elements goes to front
-			std::reverse(data.begin() + init_lengths.first + second, data.end()); // Second part - last elements moves back.
+
+			unsigned simplicity_offset = (init_lengths.second - second) % block_size; // For simplicity, we assume... okay, make it work...
+			std::reverse(data.begin() + init_lengths.first + second + simplicity_offset, data.end()); // Second part - last elements moves back.
 			std::reverse(data.begin(), data.begin() + init_lengths.first + second); // The buffer comes to the front.
-			std::reverse(data.begin() + block_size, data.begin() + init_lengths.first + second); // The first part - buffer moves back.
+			std::reverse(data.begin() + block_size, data.begin() + init_lengths.first + second + simplicity_offset); // The first part - buffer moves back.
+
+			// For simplicity, we assume... okay, make it work...
+			if(simplicity_offset != 0){
+				std::sort(data.begin() + block_size, data.begin() + block_size + simplicity_offset);
+				block_merge_forward(data.begin() + block_size, data.begin() + init_lengths.first + second + simplicity_offset, simplicity_offset, false);
+			}
 
 			buffer = data.begin();
 			end = data.end();
