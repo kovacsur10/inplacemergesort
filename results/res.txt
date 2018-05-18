@@ -1,0 +1,509 @@
+kovacsur10@kovacsur10-K55VD:~/inplacemergesort/inplacemergesort$ ./run_tests.bash 
+Merging finished successfully!
+Elapsed time (in-place): 29518
+Elapsed time (std::merge): 16380
+  Ratio: 1.80208
+Elapsed time (trivial): 14541
+  Ratio: 2.02998
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 24970
+Elapsed time (std::merge): 12512
+  Ratio: 1.99568
+Elapsed time (trivial): 17327
+  Ratio: 1.4411
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 64474
+Elapsed time (std::merge): 21083
+  Ratio: 3.0581
+Elapsed time (trivial): 33823
+  Ratio: 1.90622
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 56085
+Elapsed time (std::merge): 18707
+  Ratio: 2.99808
+Elapsed time (trivial): 21074
+  Ratio: 2.66134
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 113155
+Elapsed time (std::merge): 58294
+  Ratio: 1.94111
+Elapsed time (trivial): 79661
+  Ratio: 1.42046
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 111061
+Elapsed time (std::merge): 57712
+  Ratio: 1.9244
+Elapsed time (trivial): 75236
+  Ratio: 1.47617
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 204204
+Elapsed time (std::merge): 117361
+  Ratio: 1.73996
+Elapsed time (trivial): 149441
+  Ratio: 1.36645
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 199436
+Elapsed time (std::merge): 109249
+  Ratio: 1.82552
+Elapsed time (trivial): 146503
+  Ratio: 1.36131
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 825207
+Elapsed time (std::merge): 535932
+  Ratio: 1.53976
+Elapsed time (trivial): 692142
+  Ratio: 1.19225
+The program quits...
+Merging finished with failing!
+Elapsed time (in-place): 724197
+Elapsed time (std::merge): 428724
+  Ratio: 1.68919
+Elapsed time (trivial): 588333
+  Ratio: 1.23093
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 2768289
+Elapsed time (std::merge): 1727330
+  Ratio: 1.60264
+Elapsed time (trivial): 3063331
+  Ratio: 0.903686
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 1917089
+Elapsed time (std::merge): 784542
+  Ratio: 2.44358
+Elapsed time (trivial): 1115675
+  Ratio: 1.71832
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 6433731
+Elapsed time (std::merge): 3907167
+  Ratio: 1.64665
+Elapsed time (trivial): 4980670
+  Ratio: 1.29174
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 9876661
+Elapsed time (std::merge): 6277399
+  Ratio: 1.57337
+Elapsed time (trivial): 8288208
+  Ratio: 1.19165
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 37314074
+Elapsed time (std::merge): 22341975
+  Ratio: 1.67013
+Elapsed time (trivial): 31080780
+  Ratio: 1.20055
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 12323893
+Elapsed time (std::merge): 20844892
+  Ratio: 0.591219
+Elapsed time (trivial): 29745483
+  Ratio: 0.414311
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 110821395
+Elapsed time (std::merge): 49509960
+  Ratio: 2.23837
+Elapsed time (trivial): 65641135
+  Ratio: 1.68829
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 5177
+Elapsed time (std::merge): 5846
+  Ratio: 0.885563
+Elapsed time (trivial): 6219
+  Ratio: 0.832449
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 6131
+Elapsed time (std::merge): 7126
+  Ratio: 0.86037
+Elapsed time (trivial): 7534
+  Ratio: 0.813778
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 20504
+Elapsed time (std::merge): 7765
+  Ratio: 2.64057
+Elapsed time (trivial): 8750
+  Ratio: 2.34331
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 9138
+Elapsed time (std::merge): 3221
+  Ratio: 2.83701
+Elapsed time (trivial): 3413
+  Ratio: 2.67741
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 15476
+Elapsed time (std::merge): 6587
+  Ratio: 2.34948
+Elapsed time (trivial): 6870
+  Ratio: 2.25269
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 14085
+Elapsed time (std::merge): 4968
+  Ratio: 2.83514
+Elapsed time (trivial): 5267
+  Ratio: 2.6742
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 15190
+Elapsed time (std::merge): 6597
+  Ratio: 2.30256
+Elapsed time (trivial): 6873
+  Ratio: 2.2101
+The program quits...
+kovacsur10@kovacsur10-K55VD:~/inplacemergesort/inplacemergesort$ ./run_tests.bash 
+Merging finished successfully!
+Elapsed time (in-place): 29007
+Elapsed time (std::merge): 15880
+  Ratio: 1.82664
+Elapsed time (trivial): 13959
+  Ratio: 2.07801
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 25151
+Elapsed time (std::merge): 11333
+  Ratio: 2.21927
+Elapsed time (trivial): 16902
+  Ratio: 1.48805
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 60273
+Elapsed time (std::merge): 23313
+  Ratio: 2.58538
+Elapsed time (trivial): 26347
+  Ratio: 2.28766
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 52936
+Elapsed time (std::merge): 17311
+  Ratio: 3.05794
+Elapsed time (trivial): 20484
+  Ratio: 2.58426
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 123246
+Elapsed time (std::merge): 62954
+  Ratio: 1.95772
+Elapsed time (trivial): 86350
+  Ratio: 1.42728
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 111857
+Elapsed time (std::merge): 57501
+  Ratio: 1.94531
+Elapsed time (trivial): 74970
+  Ratio: 1.49202
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 253672
+Elapsed time (std::merge): 155434
+  Ratio: 1.63202
+Elapsed time (trivial): 205524
+  Ratio: 1.23427
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 237691
+Elapsed time (std::merge): 140333
+  Ratio: 1.69376
+Elapsed time (trivial): 156797
+  Ratio: 1.51592
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 815412
+Elapsed time (std::merge): 496102
+  Ratio: 1.64364
+Elapsed time (trivial): 737039
+  Ratio: 1.10633
+The program quits...
+Merging finished with failing!
+Elapsed time (in-place): 769067
+Elapsed time (std::merge): 456517
+  Ratio: 1.68464
+Elapsed time (trivial): 628033
+  Ratio: 1.22456
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 2924645
+Elapsed time (std::merge): 1856450
+  Ratio: 1.5754
+Elapsed time (trivial): 2353173
+  Ratio: 1.24285
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 2022274
+Elapsed time (std::merge): 832350
+  Ratio: 2.4296
+Elapsed time (trivial): 1111054
+  Ratio: 1.82014
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 6120769
+Elapsed time (std::merge): 4053341
+  Ratio: 1.51006
+Elapsed time (trivial): 5234448
+  Ratio: 1.16932
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 10002159
+Elapsed time (std::merge): 6266222
+  Ratio: 1.5962
+Elapsed time (trivial): 8236651
+  Ratio: 1.21435
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 37498500
+Elapsed time (std::merge): 22388826
+  Ratio: 1.67488
+Elapsed time (trivial): 30356658
+  Ratio: 1.23526
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 12285638
+Elapsed time (std::merge): 20692332
+  Ratio: 0.593729
+Elapsed time (trivial): 29507168
+  Ratio: 0.416361
+The program quits...
+^[[AMerging finished successfully!
+Elapsed time (in-place): 112946848
+Elapsed time (std::merge): 49053608
+  Ratio: 2.30252
+Elapsed time (trivial): 65348158
+  Ratio: 1.72839
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 2951
+Elapsed time (std::merge): 3077
+  Ratio: 0.959051
+Elapsed time (trivial): 3050
+  Ratio: 0.967541
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 2457
+Elapsed time (std::merge): 3067
+  Ratio: 0.801109
+Elapsed time (trivial): 3267
+  Ratio: 0.752066
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 9622
+Elapsed time (std::merge): 3487
+  Ratio: 2.75939
+Elapsed time (trivial): 3739
+  Ratio: 2.57342
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 8473
+Elapsed time (std::merge): 3161
+  Ratio: 2.68048
+Elapsed time (trivial): 3397
+  Ratio: 2.49426
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 8078
+Elapsed time (std::merge): 3048
+  Ratio: 2.65026
+Elapsed time (trivial): 3147
+  Ratio: 2.56689
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 9800
+Elapsed time (std::merge): 3650
+  Ratio: 2.68493
+Elapsed time (trivial): 3872
+  Ratio: 2.53099
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 42331
+Elapsed time (std::merge): 8609
+  Ratio: 4.91706
+Elapsed time (trivial): 8459
+  Ratio: 5.00426
+The program quits...
+kovacsur10@kovacsur10-K55VD:~/inplacemergesort/inplacemergesort$ ./run_tests.bash 
+Merging finished successfully!
+Elapsed time (in-place): 28909
+Elapsed time (std::merge): 16137
+  Ratio: 1.79147
+Elapsed time (trivial): 13946
+  Ratio: 2.07292
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 24185
+Elapsed time (std::merge): 11717
+  Ratio: 2.06409
+Elapsed time (trivial): 16899
+  Ratio: 1.43115
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 49784
+Elapsed time (std::merge): 17641
+  Ratio: 2.82206
+Elapsed time (trivial): 20994
+  Ratio: 2.37134
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 52632
+Elapsed time (std::merge): 17205
+  Ratio: 3.05911
+Elapsed time (trivial): 20227
+  Ratio: 2.60207
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 131826
+Elapsed time (std::merge): 68143
+  Ratio: 1.93455
+Elapsed time (trivial): 93555
+  Ratio: 1.40907
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 109890
+Elapsed time (std::merge): 57323
+  Ratio: 1.91703
+Elapsed time (trivial): 75310
+  Ratio: 1.45917
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 232548
+Elapsed time (std::merge): 154461
+  Ratio: 1.50555
+Elapsed time (trivial): 212677
+  Ratio: 1.09343
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 289107
+Elapsed time (std::merge): 171442
+  Ratio: 1.68633
+Elapsed time (trivial): 191914
+  Ratio: 1.50644
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 875223
+Elapsed time (std::merge): 498790
+  Ratio: 1.75469
+Elapsed time (trivial): 664984
+  Ratio: 1.31616
+The program quits...
+Merging finished with failing!
+Elapsed time (in-place): 774389
+Elapsed time (std::merge): 457142
+  Ratio: 1.69398
+Elapsed time (trivial): 628633
+  Ratio: 1.23186
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 2906427
+Elapsed time (std::merge): 1787511
+  Ratio: 1.62596
+Elapsed time (trivial): 2871262
+  Ratio: 1.01225
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 2075791
+Elapsed time (std::merge): 833424
+  Ratio: 2.49068
+Elapsed time (trivial): 1140877
+  Ratio: 1.81947
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 5907396
+Elapsed time (std::merge): 3813567
+  Ratio: 1.54905
+Elapsed time (trivial): 5022198
+  Ratio: 1.17626
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 9912378
+Elapsed time (std::merge): 6177089
+  Ratio: 1.6047
+Elapsed time (trivial): 8068792
+  Ratio: 1.22848
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 33551611
+Elapsed time (std::merge): 21843158
+  Ratio: 1.53602
+Elapsed time (trivial): 30258313
+  Ratio: 1.10884
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 14691629
+Elapsed time (std::merge): 23538071
+  Ratio: 0.624165
+Elapsed time (trivial): 30984793
+  Ratio: 0.474156
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 110855246
+Elapsed time (std::merge): 49300859
+  Ratio: 2.24855
+Elapsed time (trivial): 65825617
+  Ratio: 1.68407
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 2759
+Elapsed time (std::merge): 3138
+  Ratio: 0.879222
+Elapsed time (trivial): 3072
+  Ratio: 0.898112
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 2281
+Elapsed time (std::merge): 2775
+  Ratio: 0.821982
+Elapsed time (trivial): 3042
+  Ratio: 0.749836
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 10228
+Elapsed time (std::merge): 4200
+  Ratio: 2.43524
+Elapsed time (trivial): 4360
+  Ratio: 2.34587
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 8536
+Elapsed time (std::merge): 3233
+  Ratio: 2.64027
+Elapsed time (trivial): 3409
+  Ratio: 2.50396
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 18877
+Elapsed time (std::merge): 7949
+  Ratio: 2.37476
+Elapsed time (trivial): 8547
+  Ratio: 2.20861
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 11547
+Elapsed time (std::merge): 4277
+  Ratio: 2.69979
+Elapsed time (trivial): 4622
+  Ratio: 2.49827
+The program quits...
+Merging finished successfully!
+Elapsed time (in-place): 34070
+Elapsed time (std::merge): 3607
+  Ratio: 9.44552
+Elapsed time (trivial): 3943
+  Ratio: 8.64063
+The program quits...
+kovacsur10@kovacsur10-K55VD:~/inplacemergesort/inplacemergesort$ 
+

@@ -166,6 +166,5 @@ int main(int argc, char *argv[]){
 		}
 	}
 	cout << "The program quits..." << endl;
-	system("pause");
 	return 0;
 }

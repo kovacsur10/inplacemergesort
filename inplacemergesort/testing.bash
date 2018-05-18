@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in {2..10}
+for i in {2..1000000}
 do
   echo "$i"
   first=$((i/2))
